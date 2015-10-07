@@ -118,7 +118,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="macbook_pro.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="zon-jj-1Ec">
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="macbook_pro.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="zon-jj-1Ec">
                                 <rect key="frame" x="20" y="266" width="560" height="334"/>
                             </imageView>
                         </subviews>

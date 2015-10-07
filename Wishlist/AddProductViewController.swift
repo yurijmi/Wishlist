@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class AddProductViewController: UIViewController {
+class AddProductViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var productLabel : UITextField!
     @IBOutlet weak var storeLabel   : UITextField!
@@ -18,7 +18,25 @@ class AddProductViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: "imageTapped")
         
+        self.imageView.addGestureRecognizer(tapRecognizer)
+    }
+    
+    func imageTapped() {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
+            let cameraViewController = UIImagePickerController()
+                cameraViewController.sourceType = UIImagePickerControllerSourceType.Camera
+                cameraViewController.delegate   = self
+            
+            self.presentViewController(cameraViewController, animated: true, completion: nil)
+        }
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+        self.imageView.image = image
+        
+        picker.dismissViewControllerAnimated(true, completion: nil)
     }
     
     @IBAction func cancelTapped(sender: AnyObject) {
