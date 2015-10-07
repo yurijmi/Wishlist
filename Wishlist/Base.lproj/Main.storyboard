@@ -145,6 +145,11 @@
                             <constraint firstItem="2ZZ-7l-gtS" firstAttribute="top" secondItem="zon-jj-1Ec" secondAttribute="bottom" id="uv0-B4-6ir"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="zon-jj-1Ec" id="4G5-yO-1Fa"/>
+                        <outlet property="productLabel" destination="Oti-LZ-CsK" id="H6P-iS-V2x"/>
+                        <outlet property="storeLabel" destination="c64-J1-Qsj" id="iau-gt-xdD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sDS-6O-A65" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
