@@ -64,7 +64,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         let cell = UITableViewCell()
         cell.textLabel!.text = product.title
-        cell.imageView!.image = UIImage(data: product.image!)
+        
+        if product.image != nil {
+            cell.imageView!.image = UIImage(data: product.image!)
+        }
         
         return cell
     }
