@@ -84,8 +84,15 @@
                                     <navigationItem title="Add New Product" id="YQN-H9-qx6">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="3OQ-ba-ImU">
                                             <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="cancelTapped:" destination="qWp-Yd-ofb" id="zLN-tf-6jz"/>
+                                            </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="cBQ-vy-C8N"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="cBQ-vy-C8N">
+                                            <connections>
+                                                <action selector="saveTapped:" destination="qWp-Yd-ofb" id="1Xz-Kp-phW"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
