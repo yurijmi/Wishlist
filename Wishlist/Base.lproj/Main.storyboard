@@ -32,12 +32,28 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="A8x-gb-yaj">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="A8x-gb-yaj" secondAttribute="trailing" id="BmQ-Ga-MCe"/>
+                            <constraint firstItem="A8x-gb-yaj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Ga1-cY-Nz1"/>
+                            <constraint firstItem="A8x-gb-yaj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-64" id="MUp-LR-QrV"/>
+                            <constraint firstItem="A8x-gb-yaj" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="kQ9-nw-33w"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="My Wishlist" id="NjF-WG-Lo5"/>
+                    <connections>
+                        <outlet property="tableView" destination="A8x-gb-yaj" id="v0g-Tc-K9N"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="565" y="439"/>
         </scene>
     </scenes>
 </document>
