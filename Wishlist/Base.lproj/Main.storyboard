@@ -49,11 +49,30 @@
                     <navigationItem key="navigationItem" title="My Wishlist" id="NjF-WG-Lo5"/>
                     <connections>
                         <outlet property="tableView" destination="A8x-gb-yaj" id="v0g-Tc-K9N"/>
+                        <segue destination="ZaQ-at-TGL" kind="show" identifier="showProductSegue" id="sbm-oB-swo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="565" y="439"/>
+        </scene>
+        <!--Show Product View Controller-->
+        <scene sceneID="bOU-Wl-xo1">
+            <objects>
+                <viewController id="ZaQ-at-TGL" customClass="ShowProductViewController" customModule="Wishlist" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gTK-M5-Fvx"/>
+                        <viewControllerLayoutGuide type="bottom" id="bwR-au-YO3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="58Q-OU-Cv2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="45p-oa-ZKc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1224" y="439"/>
         </scene>
     </scenes>
 </document>
