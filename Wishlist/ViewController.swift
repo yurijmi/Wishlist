@@ -13,6 +13,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBOutlet weak var tableView: UITableView!
     
+    var context = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     var products : [Product] = []
 
     override func viewDidLoad() {
@@ -23,13 +24,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     override func viewWillAppear(animated: Bool) {
-        let context = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
         let request = NSFetchRequest(entityName: "Product")
         
         var results : [AnyObject]?
         
         do {
-            results = try context.executeFetchRequest(request)
+            results = try self.context.executeFetchRequest(request)
         } catch _ {
             results = nil
         }
@@ -39,6 +39,20 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
         
         self.tableView.reloadData()
+    }
+    
+    func createSampleProduct() {
+        let product = NSEntityDescription.insertNewObjectForEntityForName("Product", inManagedObjectContext: self.context) as! Product
+        
+        product.title = "Macbook Pro mid 2015"
+        product.store = "Apple"
+        product.image = UIImageJPEGRepresentation(UIImage(named: "macbook_pro.jpg")!, 1)
+        
+        do {
+            try self.context.save()
+        } catch _ {
+            
+        }
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
