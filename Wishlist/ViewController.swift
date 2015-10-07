@@ -14,7 +14,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var tableView: UITableView!
     
     var context = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
-    var products : [Product] = []
+    
+    var products        : [Product] = []
+    var selectedProduct :  Product? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,7 +75,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.selectedProduct = self.products[indexPath.row]
         
+        performSegueWithIdentifier("showProductSegue", sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showProductSegue" {
+            let destVC = segue.destinationViewController as! ShowProductViewController
+            
+            destVC.product = self.selectedProduct
+        }
     }
 
 }

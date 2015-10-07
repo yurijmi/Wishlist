@@ -99,6 +99,11 @@
                             <constraint firstItem="Qb0-ud-BFV" firstAttribute="top" secondItem="5Sm-kT-39i" secondAttribute="bottom" constant="20" id="zKa-Th-CxS"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="KEK-3X-ksM" id="Xw2-f2-KGc"/>
+                        <outlet property="productLabel" destination="5Sm-kT-39i" id="daD-B4-uqJ"/>
+                        <outlet property="storeLabel" destination="Qb0-ud-BFV" id="Npa-Mw-IvH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="45p-oa-ZKc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
